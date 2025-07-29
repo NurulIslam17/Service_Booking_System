@@ -21,9 +21,22 @@ class BookingService
     {
         $booking = [
             'user_id' => auth()->user()->id,
-            'service_id' => $data['service_id_'],
+            'service_id' => $data['service_id'],
             'booking_date' => now(),
         ];
         return $this->bookingRepository->create($booking);
+    }
+
+
+    public function update($data, $id)
+    {
+        $booking = [
+            'status' => $data['status']
+        ];
+        $this->bookingRepository->update($booking ,$id);
+    }
+    public function delete($id)
+    {
+        $this->bookingRepository->delete($id);
     }
 }

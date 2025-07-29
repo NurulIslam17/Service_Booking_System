@@ -16,21 +16,24 @@ class BookingController extends Controller
         $this->bookingService = $bookingService;
     }
 
-
     public function get()
     {
         $data =  $this->bookingService->get();
-        if ($data) {
-            return $this->successResponse($data, 'Success', 200);
-        }
-        return $this->errorResponse('Something went wrong', [], 400);
+        return $this->successResponse($data, 'Success', 200);
     }
     public function store(Request $request)
     {
         $data =  $this->bookingService->create($request->all());
-        if ($data) {
-            return $this->successResponse($data, 'Success', 200);
-        }
-        return $this->errorResponse('Something went wrong', [], 400);
+        return $this->successResponse($data, 'Success', 200);
+    }
+    public function update(Request $request, $id)
+    {
+        $this->bookingService->update($request->all(), $id);
+        return $this->successResponse([], 'Updated', 200);
+    }
+    public function delete($id)
+    {
+        $this->bookingService->delete($id);
+        return $this->successResponse([], 'Deleted', 200);
     }
 }
