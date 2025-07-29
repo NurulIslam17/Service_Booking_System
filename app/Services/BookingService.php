@@ -22,7 +22,7 @@ class BookingService
         $booking = [
             'user_id' => auth()->user()->id,
             'service_id' => $data['service_id'],
-            'booking_date' => now(),
+            'booking_date' => $data['booking_date'] ?? now(),
         ];
         return $this->bookingRepository->create($booking);
     }
@@ -33,7 +33,7 @@ class BookingService
         $booking = [
             'status' => $data['status']
         ];
-        $this->bookingRepository->update($booking ,$id);
+        $this->bookingRepository->update($booking, $id);
     }
     public function delete($id)
     {
