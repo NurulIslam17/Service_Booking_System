@@ -12,4 +12,9 @@ class Booking extends Model
         'booking_date',
         'status',
     ];
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class);
+    }
 }
