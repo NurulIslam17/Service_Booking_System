@@ -7,7 +7,7 @@ It is a simple Laravel API project implemented with Sanctum API authentication. 
 # Admin Role
 
 - Also a system user
-- Can Create Busines Service and Permorme Update, Delete operation
+- Can Create Business Service and Perform Update, Delete operation
 - Can approve booking service
 - Can see all customers booking service
 - Can delete booking service
