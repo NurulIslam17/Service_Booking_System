@@ -18,7 +18,7 @@ It is a simple Laravel API project implemented with Sanctum API authentication. 
 - Can see available business service (login required)
 - Can see only own booking
 
-# Requirments
+# Requirements
 
 - Laragon or any Local server setup (Xamp,Herd)
 - VS code (or any code Editor)
