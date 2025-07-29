@@ -1,6 +1,6 @@
 
 
-# Story
+# About
 
 It is a simple Laravel API project implemented with Sanctum API authentication. There are basically two types of users: one is Admin, and the other is Customer. There are some business services for which any customer can book the service, but before that, that specific customer should have a system member registered via the system. Initially, the customer booked a service that is pending. The system admin can approve the service for the customer.
 
